@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Minha página | Meu primeiro blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Minha página" />
+<meta name="author" content="Bruno" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Aprendendo a criar uma página de blog com o jupyter notebook" />
+<meta property="og:description" content="Aprendendo a criar uma página de blog com o jupyter notebook" />
+<link rel="canonical" href="https://brunozoli.github.io/my_first_blog/blog/2021/02/17/Primeiro-post.html" />
+<meta property="og:url" content="https://brunozoli.github.io/my_first_blog/blog/2021/02/17/Primeiro-post.html" />
+<meta property="og:site_name" content="Meu primeiro blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-17T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://brunozoli.github.io/my_first_blog/blog/2021/02/17/Primeiro-post.html","@type":"BlogPosting","headline":"Minha página","dateModified":"2021-02-17T00:00:00-06:00","datePublished":"2021-02-17T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://brunozoli.github.io/my_first_blog/blog/2021/02/17/Primeiro-post.html"},"author":{"@type":"Person","name":"Bruno"},"description":"Aprendendo a criar uma página de blog com o jupyter notebook","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/my_first_blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://brunozoli.github.io/my_first_blog/feed.xml" title="Meu primeiro blog" /><link rel="shortcut icon" type="image/x-icon" href="/my_first_blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/my_first_blog/">Meu primeiro blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/my_first_blog/about/">About Me</a><a class="page-link" href="/my_first_blog/search/">Search</a><a class="page-link" href="/my_first_blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Minha página</h1><p class="page-description">Aprendendo a criar uma página de blog com o jupyter notebook</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-02-17T00:00:00-06:00" itemprop="datePublished">
+        Feb 17, 2021
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Bruno</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/my_first_blog/categories/#blog">blog</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-02-17-Primeiro-post.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">,(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 56, 755, 467, 654,  48, 776, 813, 312, 236, 967],
+       [216, 146, 618, 576, 997, 593, 726, 396, 990, 182],
+       [378, 501, 575, 358, 436, 986, 131, 793, 638, 130],
+       [168, 589, 853, 338, 620, 833, 387, 162, 837, 188],
+       [147, 963, 850, 883, 158, 507, 534,  31,  32, 449],
+       [840,   8, 961, 475, 629,   1, 411, 972, 214, 783],
+       [ 63, 185, 204, 515, 662, 572, 754, 954, 645, 822],
+       [219, 269, 659, 140, 374, 139, 484, 509, 222, 970],
+       [497, 814, 722, 716, 966, 615,  27, 953,  60, 992],
+       [850, 795, 261, 627, 132, 174, 988, 679,  46, 949]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>56</td>
+      <td>755</td>
+      <td>467</td>
+      <td>654</td>
+      <td>48</td>
+      <td>776</td>
+      <td>813</td>
+      <td>312</td>
+      <td>236</td>
+      <td>967</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>216</td>
+      <td>146</td>
+      <td>618</td>
+      <td>576</td>
+      <td>997</td>
+      <td>593</td>
+      <td>726</td>
+      <td>396</td>
+      <td>990</td>
+      <td>182</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>378</td>
+      <td>501</td>
+      <td>575</td>
+      <td>358</td>
+      <td>436</td>
+      <td>986</td>
+      <td>131</td>
+      <td>793</td>
+      <td>638</td>
+      <td>130</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>168</td>
+      <td>589</td>
+      <td>853</td>
+      <td>338</td>
+      <td>620</td>
+      <td>833</td>
+      <td>387</td>
+      <td>162</td>
+      <td>837</td>
+      <td>188</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>147</td>
+      <td>963</td>
+      <td>850</td>
+      <td>883</td>
+      <td>158</td>
+      <td>507</td>
+      <td>534</td>
+      <td>31</td>
+      <td>32</td>
+      <td>449</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>840</td>
+      <td>8</td>
+      <td>961</td>
+      <td>475</td>
+      <td>629</td>
+      <td>1</td>
+      <td>411</td>
+      <td>972</td>
+      <td>214</td>
+      <td>783</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>63</td>
+      <td>185</td>
+      <td>204</td>
+      <td>515</td>
+      <td>662</td>
+      <td>572</td>
+      <td>754</td>
+      <td>954</td>
+      <td>645</td>
+      <td>822</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>219</td>
+      <td>269</td>
+      <td>659</td>
+      <td>140</td>
+      <td>374</td>
+      <td>139</td>
+      <td>484</td>
+      <td>509</td>
+      <td>222</td>
+      <td>970</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>497</td>
+      <td>814</td>
+      <td>722</td>
+      <td>716</td>
+      <td>966</td>
+      <td>615</td>
+      <td>27</td>
+      <td>953</td>
+      <td>60</td>
+      <td>992</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>850</td>
+      <td>795</td>
+      <td>261</td>
+      <td>627</td>
+      <td>132</td>
+      <td>174</td>
+      <td>988</td>
+      <td>679</td>
+      <td>46</td>
+      <td>949</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>56</td>
+      <td>755</td>
+      <td>467</td>
+      <td>654</td>
+      <td>48</td>
+      <td>776</td>
+      <td>813</td>
+      <td>312</td>
+      <td>236</td>
+      <td>967</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>216</td>
+      <td>146</td>
+      <td>618</td>
+      <td>576</td>
+      <td>997</td>
+      <td>593</td>
+      <td>726</td>
+      <td>396</td>
+      <td>990</td>
+      <td>182</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>378</td>
+      <td>501</td>
+      <td>575</td>
+      <td>358</td>
+      <td>436</td>
+      <td>986</td>
+      <td>131</td>
+      <td>793</td>
+      <td>638</td>
+      <td>130</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>168</td>
+      <td>589</td>
+      <td>853</td>
+      <td>338</td>
+      <td>620</td>
+      <td>833</td>
+      <td>387</td>
+      <td>162</td>
+      <td>837</td>
+      <td>188</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>147</td>
+      <td>963</td>
+      <td>850</td>
+      <td>883</td>
+      <td>158</td>
+      <td>507</td>
+      <td>534</td>
+      <td>31</td>
+      <td>32</td>
+      <td>449</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>840</td>
+      <td>8</td>
+      <td>961</td>
+      <td>475</td>
+      <td>629</td>
+      <td>1</td>
+      <td>411</td>
+      <td>972</td>
+      <td>214</td>
+      <td>783</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>63</td>
+      <td>185</td>
+      <td>204</td>
+      <td>515</td>
+      <td>662</td>
+      <td>572</td>
+      <td>754</td>
+      <td>954</td>
+      <td>645</td>
+      <td>822</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>219</td>
+      <td>269</td>
+      <td>659</td>
+      <td>140</td>
+      <td>374</td>
+      <td>139</td>
+      <td>484</td>
+      <td>509</td>
+      <td>222</td>
+      <td>970</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>497</td>
+      <td>814</td>
+      <td>722</td>
+      <td>716</td>
+      <td>966</td>
+      <td>615</td>
+      <td>27</td>
+      <td>953</td>
+      <td>60</td>
+      <td>992</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>850</td>
+      <td>795</td>
+      <td>261</td>
+      <td>627</td>
+      <td>132</td>
+      <td>174</td>
+      <td>988</td>
+      <td>679</td>
+      <td>46</td>
+      <td>949</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>56</td>
+      <td>755</td>
+      <td>467</td>
+      <td>654</td>
+      <td>48</td>
+      <td>776</td>
+      <td>813</td>
+      <td>312</td>
+      <td>236</td>
+      <td>967</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>216</td>
+      <td>146</td>
+      <td>618</td>
+      <td>576</td>
+      <td>997</td>
+      <td>593</td>
+      <td>726</td>
+      <td>396</td>
+      <td>990</td>
+      <td>182</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>378</td>
+      <td>501</td>
+      <td>575</td>
+      <td>358</td>
+      <td>436</td>
+      <td>986</td>
+      <td>131</td>
+      <td>793</td>
+      <td>638</td>
+      <td>130</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>168</td>
+      <td>589</td>
+      <td>853</td>
+      <td>338</td>
+      <td>620</td>
+      <td>833</td>
+      <td>387</td>
+      <td>162</td>
+      <td>837</td>
+      <td>188</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>147</td>
+      <td>963</td>
+      <td>850</td>
+      <td>883</td>
+      <td>158</td>
+      <td>507</td>
+      <td>534</td>
+      <td>31</td>
+      <td>32</td>
+      <td>449</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>840</td>
+      <td>8</td>
+      <td>961</td>
+      <td>475</td>
+      <td>629</td>
+      <td>1</td>
+      <td>411</td>
+      <td>972</td>
+      <td>214</td>
+      <td>783</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>63</td>
+      <td>185</td>
+      <td>204</td>
+      <td>515</td>
+      <td>662</td>
+      <td>572</td>
+      <td>754</td>
+      <td>954</td>
+      <td>645</td>
+      <td>822</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>219</td>
+      <td>269</td>
+      <td>659</td>
+      <td>140</td>
+      <td>374</td>
+      <td>139</td>
+      <td>484</td>
+      <td>509</td>
+      <td>222</td>
+      <td>970</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>497</td>
+      <td>814</td>
+      <td>722</td>
+      <td>716</td>
+      <td>966</td>
+      <td>615</td>
+      <td>27</td>
+      <td>953</td>
+      <td>60</td>
+      <td>992</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>850</td>
+      <td>795</td>
+      <td>261</td>
+      <td>627</td>
+      <td>132</td>
+      <td>174</td>
+      <td>988</td>
+      <td>679</td>
+      <td>46</td>
+      <td>949</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/my_first_blog/blog/2021/02/17/Primeiro-post.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/my_first_blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/my_first_blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/my_first_blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Data Science Blog</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
